@@ -1,0 +1,271 @@
+/* blog.module.css */
+
+/* General Page Layout */
+/* Add this to the general page layout to ensure content starts below the navbar */
+.pageContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 80px; /* Adjust this value based on the height of your navbar */
+}
+
+.mainContentWrapper {
+    background-color: lightblue;
+    padding: 10px 20px;
+}
+
+.tags {
+    margin-top: 10px;
+  }
+  
+.tag {
+display: inline-block;
+margin-right: 10px;
+background-color: #e0e0e0;
+padding: 5px 10px;
+border-radius: 5px;
+}
+
+
+/* Navigation Button */
+.navButton {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.navButton:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
+}
+
+/* Blog Title and Content */
+.blogTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.blogDescription {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.blogContent {
+    margin-bottom: 40px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Comments Section */
+.commentsContainer {
+    border-top: 2px solid #eee;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.commentBox {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Voting and Report Buttons */
+.voteContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* General Button Styles */
+.voteButton {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.voteButton:hover {
+    transform: translateY(-2px);
+}
+
+/* Upvote Button */
+.voteButton.upvote {
+    background-color: #28a745;
+}
+
+.voteButton.upvote:hover {
+    background-color: #218838;
+}
+
+/* Downvote Button */
+.voteButton.downvote {
+    background-color: #dc3545;
+}
+
+.voteButton.downvote:hover {
+    background-color: #c82333;
+}
+
+/* Vote Count */
+.voteCount {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Report Button */
+.reportButton {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+.reportButton:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* Reply Button */
+.replyButton {
+    background-color: transparent;
+    color: #0070f3;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.replyButton:hover {
+    color: #005bb5;
+    transform: translateY(-2px);
+}
+
+/* Add Comment Section */
+.commentInput {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.commentButton {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.commentButton:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination button:hover {
+    background-color: #eee;
+    transform: translateY(-2px);
+}
+
+.pagination span {
+    align-self: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Updated Vote Button Styles */
+.voteContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.voteButton {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.voteButton:hover {
+    transform: translateY(-2px);
+}
+
+/* Upvote Button */
+.voteButton.upvote {
+    background-color: #28a745;
+}
+
+.voteButton.upvote:hover {
+    background-color: #218838;
+}
+
+/* Downvote Button */
+.voteButton.downvote {
+    background-color: #dc3545;
+}
+
+.voteButton.downvote:hover {
+    background-color: #c82333;
+}
+
+/* Vote Count */
+.voteCount {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}

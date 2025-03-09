@@ -1,0 +1,12 @@
+# Use Rust image
+FROM rust:1.52-alpine
+
+# Create a non-root user
+RUN adduser -D runner
+USER runner
+
+# Set the working directory
+WORKDIR /home/runner
+
+# Default command to compile and run the Rust program
+CMD ["sh", "-c", "rustc Main.rs && ./Main"]

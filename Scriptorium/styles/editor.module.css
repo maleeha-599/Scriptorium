@@ -1,0 +1,70 @@
+/* styles/editor.module.css */
+.editorContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.titleInput, .descriptionInput, .tagInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.descriptionInput {
+  height: 100px;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  margin: 0 5px 5px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.removeTagButton {
+  background: none;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.addTagButton {
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+.runButton, .saveButton {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.output {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-top: 10px;
+  white-space: pre-wrap;
+}
+
+.deleteButton {
+  background-color: #dc2626;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.deleteButton:hover {
+  background-color: #b91c1c;
+}
+

@@ -1,0 +1,27 @@
+# Use the official Haskell image from Docker Hub
+FROM haskell:latest
+
+# Set the working directory
+WORKDIR /home/runner
+
+# Create a non-root user
+RUN useradd -ms /bin/bash runner
+
+# Switch to root for apt-get installation
+USER root
+
+# Install necessary dependencies for running Haskell code
+RUN apt-get update && apt-get install -y \
+  build-essential \
+  libgmp-dev \
+  libncurses-dev \
+  && rm -rf /var/lib/apt/lists/*
+
+# Switch back to the non-root user
+USER runner
+
+# Copy the Haskell code into the container
+COPY . /home/runner
+
+# Default command to compile and run the Haskell program
+CMD ["ghc", "Main.hs", "-o", "Main"] && ["./Main"]

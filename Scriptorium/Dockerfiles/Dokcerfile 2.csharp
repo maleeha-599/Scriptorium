@@ -1,0 +1,10 @@
+# dockerfiles/Dockerfile.csharp
+
+FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine
+
+RUN adduser -D runner
+USER runner
+
+WORKDIR /home/runner
+
+CMD ["sh", "-c", "dotnet new console -o app -n App && mv Main.cs app/Program.cs && cd app && dotnet run"]

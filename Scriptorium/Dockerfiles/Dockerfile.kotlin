@@ -1,0 +1,25 @@
+# Use OpenJDK base image
+FROM openjdk:11-jdk-slim
+
+# Install required tools and Kotlin compiler
+RUN apt-get update && \
+    apt-get install -y curl unzip && \
+    curl -L https://github.com/JetBrains/kotlin/releases/download/v1.8.10/kotlin-compiler-1.8.10.zip -o kotlin-compiler.zip && \
+    unzip kotlin-compiler.zip -d /usr/local && \
+    ln -s /usr/local/kotlin-compiler-1.8.10/bin/kotlinc /usr/local/bin/kotlinc && \
+    ln -s /usr/local/kotlin-compiler-1.8.10/bin/kotlin /usr/local/bin/kotlin && \
+    rm kotlin-compiler.zip && \
+    apt-get remove --purge -y unzip && \
+    apt-get autoremove -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Create a non-root user
+RUN useradd -ms /bin/bash runner
+USER runner
+
+# Set the working directory
+WORKDIR /home/runner
+
+# Default command to compile and run the Kotlin program
+CMD ["sh", "-c", "kotlinc Main.kt -include-runtime -d Main.jar && java -jar Main.jar"]

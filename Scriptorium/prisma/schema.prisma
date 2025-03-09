@@ -1,0 +1,122 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(uuid())
+  first_name   String
+  last_name    String
+  username     String     @unique 
+  email        String     @unique
+  password     String
+  avatar       String?    @default("/uploads/avatars/avatar1.png")
+  phone_number String
+  is_admin     Boolean    @default(false) 
+  templates    Template[] 
+  blogPosts    BlogPost[]
+  comments     Comment[]
+  reports      Report[]    @relation("UserReports") // Relation to Report
+  ratings      Rating[]  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Template {
+  id          String    @id @default(uuid())
+  title       String
+  code        String    
+  description String
+  stdin       String?  
+  forked      Boolean       @default(false) // Indicates if the snippet is forked
+  forkedId    String?     
+  language    String
+  author      User      @relation(fields: [author_id], references: [id], onDelete: Cascade)
+  author_id   String
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+  tags        Tag[] @relation("TemplateTags") // Use a relation to a new Tag model
+  blogPosts   BlogPost[] @relation("TemplateBlogPosts")
+  numOfViews  Int       @default(0)  // New field for tracking views         
+}
+
+model BlogPost {
+  id              String    @id @default(uuid())
+  title           String
+  description     String
+  content         String
+  templates       Template[] @relation("TemplateBlogPosts")
+  author          User      @relation(fields: [author_id], references: [id])
+  author_id       String
+  created_at      DateTime  @default(now())
+  updated_at      DateTime  @updatedAt
+  comments        Comment[]
+  ratings         Rating[]
+  is_hidden       Boolean   @default(false)
+  reports         Report[]  @relation("BlogPostReports") // Relation to Report
+  tags            Tag[] @relation("BlogPostTags") // Use a relation to a new Tag model
+  numOfUpvotes    Int       @default(0)
+  numOfDownvotes  Int       @default(0)
+  numOfReports    Int       @default(0)
+}
+
+model Comment {
+  id          String   @id @default(uuid())
+  blog_post   BlogPost @relation(fields: [blog_post_id], references: [id])
+  blog_post_id String
+  user        User     @relation(fields: [user_id], references: [id])
+  user_id     String
+  content     String
+  parent      Comment? @relation("CommentReplies", fields: [parent_id], references: [id])
+  parent_id   String?
+  replies     Comment[] @relation("CommentReplies")
+  created_at  DateTime @default(now())
+  ratings     Rating[]
+  is_hidden   Boolean   @default(false)
+  reports     Report[]  @relation("CommentReports") // Relation to Report
+  numOfUpvotes Int      @default(0)
+  numOfDownvotes  Int   @default(0) 
+  numOfReports    Int   @default(0)
+}
+
+model Rating {
+  id         String   @id @default(uuid())
+  rating     Int      
+  user       User     @relation(fields: [user_id], references: [id])
+  user_id    String
+  blogPost   BlogPost? @relation(fields: [blog_post_id], references: [id])
+  blog_post_id String?
+  comment    Comment?  @relation(fields: [comment_id], references: [id])
+  comment_id String?
+  targetType String
+}
+
+model Tag {
+  id   String  @id @default(uuid())
+  name String  @unique
+  templates Template[] @relation("TemplateTags")
+  blogPosts BlogPost[] @relation("BlogPostTags")
+}
+
+model Report {
+  id          String   @id @default(uuid())
+  explanation String
+  createdAt   DateTime @default(now())
+  reporter    User     @relation("UserReports", fields: [reporterId], references: [id])
+  reporterId  String
+  post        BlogPost? @relation("BlogPostReports", fields: [postId], references: [id])
+  postId      String?
+  comment     Comment?  @relation("CommentReports", fields: [commentId], references: [id])
+  commentId   String?
+}
+
+model BlacklistedToken {
+  id        Int      @id @default(autoincrement())
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}

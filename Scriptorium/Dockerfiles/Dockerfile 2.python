@@ -1,0 +1,11 @@
+# dockerfiles/Dockerfile.python
+
+FROM python:3.9-alpine
+
+# Create a non-root user
+RUN adduser -D runner
+USER runner
+
+WORKDIR /home/runner
+
+CMD ["python", "Main.py"]

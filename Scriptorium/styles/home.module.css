@@ -1,0 +1,149 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background, #ffffff);
+  color: var(--foreground, #000000);
+}
+
+/* Dark mode button at the top right */
+.darkModeButtonWrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Dark mode button styling */
+.darkModeButton {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.darkModeButton:hover {
+  background-color: #005bb5;
+}
+
+/* Title styling similar to homepage */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Search bar container for centering */
+.searchBarContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.searchInput.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Template grid with auto-responsive columns */
+.templateGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Template card styling for both light and dark modes */
+.templateCard {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.templateCard.dark {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+/* Template title styling */
+.templateTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Template description styling */
+.templateDescription {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Button link styling consistent with homepage */
+.buttonLink {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #0070f3; /* Blue background */
+  color: white; /* White text */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+.buttonLink:hover {
+  background-color: #005bb5; /* Darker blue when hovered */
+}
+
+/* Pagination controls aligned to the center */
+.paginationControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Pagination button styling */
+.paginationButton {
+  padding: 8px 16px;
+  background-color: #e2e8f0;
+  color: #1a202c;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.paginationButton.dark {
+  background-color: #4a5568;
+  color: #ffffff;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Page indicator styling */
+.pageIndicator {
+  font-size: 1rem;
+  font-weight: bold;
+}

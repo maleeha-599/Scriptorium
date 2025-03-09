@@ -1,0 +1,95 @@
+/* styles/CreateTemplate.module.css */
+
+.container {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: var(--background, #ffffff);
+  color: var(--foreground, #000000);
+  margin: 100px auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #ffffff;
+}
+
+/* Navigation Buttons */
+.navigationButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.navigationButton,
+.darkModeButton {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.navigationButton:hover,
+.darkModeButton:hover {
+  background-color: #1d4ed8;
+}
+
+/* Page Title */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Form Styles */
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.darkInput,
+.darkTextarea,
+.darkSelect {
+  background-color: #374151;
+  color: #ffffff;
+  border-color: #4b5563;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #16a34a;
+}
+
+.darkSubmitButton {
+  background-color: #16a34a;
+}
+
+.darkSubmitButton:hover {
+  background-color: #15803d;
+}

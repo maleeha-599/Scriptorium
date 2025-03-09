@@ -1,0 +1,271 @@
+/* Container Styles */
+/* Container Styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.blogTitle {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.blogDescription {
+  color: #555;
+  margin: 10px 0;
+}
+
+.readMore {
+  color: #0070f3;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.blogAuthor {
+  font-size: 14px;
+  color: #555;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.button {
+  padding: 1rem 2rem; /* Bigger padding for larger buttons */
+  font-size: 1.25rem; /* Larger font size */
+  border-radius: 0.5rem; /* Slightly more rounded corners */
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.blueButton {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Profile & Logout Button Styles */
+.profileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem; /* Match other buttons */
+  font-size: 1.25rem; /* Match other buttons */
+  font-weight: 600; /* Match other buttons */
+  background-color: #f7fafc; /* Keep the light color */
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem; /* Match the other buttons' rounded corners */
+  color: #2d3748;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.profileButton:hover {
+  background-color: #edf2f7;
+}
+
+.avatar {
+  width: 2.5rem; /* Slightly larger for better balance */
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.authButtons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.blueButton {
+  background-color: #3182ce;
+  transition: background-color 0.2s;
+}
+
+.blueButton:hover {
+  background-color: #2b6cb0;
+}
+
+.redButton {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.notification {
+  position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #38a169;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+}
+
+
+.redButton:hover {
+  background-color: #c0392b;
+}
+
+/* Dropdown Menu Styles */
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownItem {
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: none;
+  text-align: left;
+  color: #2d3748;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.dropdownItem:hover {
+  background-color: #f7fafc;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Total Posts Count */
+.totalPosts {
+  background-color: #5c5c5c; /* Light grey */
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Blog List & Items */
+.blogList {
+  list-style: none;
+  padding: 0;
+}
+
+.blogItem {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.blogItem h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.blogItem p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.blogItem small {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Search Input */
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 150px;
+  cursor: pointer;
+}
+
+/* Profile & Logout Button Styles */
+.logoutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem; /* Match the profile button padding */
+  font-size: 1.25rem; /* Same font size */
+  font-weight: 600; /* Same font weight */
+  background-color: #e05151; /* Red background for logout */
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem; /* Rounded corners */
+  color: white; /* White text color */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logoutButton:hover {
+  background-color: #c53030;
+}

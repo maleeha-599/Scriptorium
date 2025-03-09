@@ -1,0 +1,143 @@
+/* styles/OnlineIDE.module.css */
+
+.container {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: var(--background, #ffffff);
+  color: var(--foreground, #000000);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 100px auto;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #ffffff;
+}
+
+/* Navigation Buttons */
+.navigationButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.navigationButton,
+.darkModeButton {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 100px; /* Adjust this value to control the distance from the bottom */
+  right: 10px;
+  transform: translateX(-50%); /* Centers the button horizontally */
+}
+
+
+.navigationButton:hover,
+.darkModeButton:hover {
+  background-color: #1d4ed8;
+}
+
+/* Page Title */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Language Selector */
+.languageSelector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.languageSelector label {
+  margin-right: 10px;
+}
+
+.languageDropdown {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.darkModeButton {
+  background-color: #2563eb;
+}
+
+.darkModeButton:hover {
+  background-color: #1d4ed8;
+}
+
+/* Code Editor */
+.codeEditor {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 15px;
+}
+
+/* Input Editor */
+.inputEditor {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.darkInputEditor {
+  background-color: #374151;
+  color: #ffffff;
+  border-color: #4b5563;
+}
+
+/* Execute Button */
+.executeButton {
+  padding: 10px 20px;
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.executeButton:hover {
+  background-color: #16a34a;
+}
+
+.darkExecuteButton {
+  background-color: #16a34a;
+}
+
+.darkExecuteButton:hover {
+  background-color: #15803d;
+}
+
+/* Output Container */
+.outputContainer {
+  margin-top: 20px;
+}
+
+.outputBox,
+.errorBox {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.darkOutputBox,
+.darkErrorBox {
+  background-color: #374151;
+  color: #ffffff;
+  border-color: #4b5563;
+}

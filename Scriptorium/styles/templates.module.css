@@ -1,0 +1,377 @@
+/* templates.module.css */
+
+/* General container styles */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 100px auto;
+  background-color: var(--background, #ffffff);
+  color: var(--foreground, #000000);
+}
+
+/* Dark mode styles */
+.dark {
+  --background: #121212;
+  --foreground: #ffffff;
+}
+
+.darkModeButtonWrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.darkModeButton {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.darkModeButton:hover {
+  background-color: #005bb5;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Search bar */
+.searchBarContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.searchInput.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Template card grid */
+.templateGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 800px;
+  width: 100%;
+}
+
+.templateCard {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.templateCard.dark {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.templateTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.templateDescription {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.buttonLink {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.buttonLink:hover {
+  background-color: #005bb5;
+}
+
+/* Pagination controls */
+.paginationControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.paginationButton {
+  padding: 8px 16px;
+  background-color: #e2e8f0;
+  color: #1a202c;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.paginationButton.dark {
+  background-color: #4a5568;
+  color: #ffffff;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageIndicator {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Shared styles for code and input boxes */
+.sharedBoxStyles {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+/* Code editor and input editor styles */
+.codeEditor,
+.inputEditor {
+  height: auto;
+}
+
+.codeEditor.dark,
+.inputEditor.dark {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.outputBox, .errorBox {
+  font-family: 'Courier New', monospace;
+  padding: 10px;
+  overflow-x: auto;
+  background-color: var(--output-bg, #f9f9f9); /* Default background */
+  color: var(--output-color, #000); /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply styles for dark mode */
+.outputBox.dark, .errorBox.dark {
+  background-color: #1f2937; /* Blackish background */
+  color: #e5e7eb; /* Light gray text */
+}
+
+/* Execute button */
+.executeButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.executeButton.dark {
+  background-color: #2563eb;
+}
+
+.executeButton:hover {
+  background-color: #0056b3;
+}
+
+.ideTitle {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* IDE container dark mode */
+.ideContainer.dark {
+  background-color: #1e293b;
+  border-color: #4b5563;
+}
+
+.navigationButtonWrapper {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+}
+
+.navigationButton {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navigationButton:hover {
+  background-color: #005bb5;
+}
+.darkTemplateTitle {
+  color: black;
+}
+/* File name styles */
+.fileName {
+  font-size: 0.85rem;
+  color: #333; /* Default color */
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+/* Dark mode file name styles */
+.darkFileName {
+  color: #333
+}
+
+
+.additionalInfo {
+  font-size: 0.75rem;
+  color: #666; /* Default muted color */
+  margin-top: 5px;
+}
+
+.darkAdditionalInfo {
+  color: #aaa; /* Lighter muted color for dark mode */
+}
+
+.myTemplatesButtonWrapper {
+  position: absolute;
+  top: 20px;
+  right: 140px;
+}
+
+.myTemplatesButton {
+  padding: 10px 20px;
+  background-color: #22c55e;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.myTemplatesButton:hover {
+  background-color: #16a34a;
+}
+
+/* Dark mode styles */
+.dark .myTemplatesButton {
+  background-color: #16a34a;
+}
+
+.dark .myTemplatesButton:hover {
+  background-color: #15803d;
+}
+/* Template Card */
+.templateCard {
+  background-color: #f5f5f5;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #000; /* Ensure text is visible in light mode */
+}
+
+.templateCard:hover {
+  background-color: #e5e5e5;
+}
+
+.darkTemplateCard {
+  background-color: #1f2937;
+  color: #fff; /* Ensure text is visible in dark mode */
+}
+
+.darkTemplateCard:hover {
+  background-color: #374151;
+}
+
+.templateTitle {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.templateDescription {
+  margin-bottom: 10px;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #2563eb;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.darkTag {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.templateTitle {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: var(--textColor, #000);
+}
+
+.templateDescription {
+  color: var(--textColor, #000);
+}
+
+.darkTemplateCard {
+  background-color: #1f2937;
+}
+
+.darkTemplateCard .templateTitle,
+.darkTemplateCard .templateDescription {
+  color: #fff;
+}
+
+/* Tags */
+.tag {
+  background-color: #2563eb;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.darkTag {
+  background-color: #3b82f6;
+  color: white;
+}
+
+
+
+

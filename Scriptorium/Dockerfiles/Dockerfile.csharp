@@ -1,0 +1,21 @@
+# Use the official Go image
+FROM golang:1.17-alpine
+
+# Create a non-root user
+RUN adduser --disabled-password --gecos "" runner
+
+# Switch to the new user
+USER runner
+
+# Set the working directory
+WORKDIR /home/runner
+
+# Create a writable temporary directory explicitly for Go
+RUN mkdir -p /home/runner/tmp && chmod 777 /home/runner/tmp
+
+# Set environment variables to use the writable tmp directory
+ENV GOPATH=/home/runner/tmp
+ENV GOTMPDIR=/home/runner/tmp
+
+# Default command to compile and run the Go program
+CMD ["sh", "-c", "go run Main.go"]

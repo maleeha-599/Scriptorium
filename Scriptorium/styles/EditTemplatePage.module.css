@@ -1,0 +1,58 @@
+.container {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--background, #ffffff);
+  color: var(--foreground, #000000);
+  position: relative;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #ffffff;
+}
+
+.navigationButtonWrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.navigationButton {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.navigationButton:hover {
+  background-color: #1d4ed8;
+}
+
+.darkModeButtonWrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.darkModeButton {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.darkModeButton:hover {
+  background-color: #1d4ed8;
+}
+
+.title {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+/* Additional styles for the form can be added here */

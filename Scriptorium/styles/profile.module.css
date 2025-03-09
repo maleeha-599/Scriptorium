@@ -1,0 +1,191 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background-color: #f3f4f6; */
+  color: #1f2937;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 150px;
+  cursor: pointer;
+}
+
+.card {
+  max-width: 36rem;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  /* space-y: 1rem; */
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.placeholderAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  background-color: #d1d5db;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #4b5563;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* .info {
+  space-y: 0.5rem;
+} */
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  font-weight: normal;
+}
+
+.button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Adjust spacing between buttons */
+  margin-top: 1rem; /* Optional: Add spacing above the buttons */
+}
+
+.editButton, .changePasswordButton {
+  flex: 1; /* Optional: Make buttons the same width */
+  text-align: center; /* Center align text inside buttons */
+}
+
+.editButton:hover {
+  background-color: #d97706;
+}
+
+.changePasswordButton:hover {
+  background-color: #2563eb;
+}
+
+.submitButton, .cancelButton {
+  flex: 1; /* Make buttons the same size */
+  text-align: center;
+  /* background-color: #10b981; */
+}
+
+.cancelButton:hover {
+  background-color: #f44336; /* Red for cancel */
+}
+
+.submitButton:hover {
+  background-color: #059669;
+}
+
+.form {
+  margin-top: 1rem;
+  /* space-y: 1rem; */
+}
+
+.input {
+  width: 80%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+}
+
+.avatarSelection {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.avatarOption {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.25rem solid transparent;
+}
+
+.avatarOptionSelected {
+  border-color: #1f2937;
+}
+
+.avatarImage {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.message {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success {
+  color: #10b981;
+}
+
+.error {
+  color: #ef4444;
+}
+
+
+.formGroup {
+  margin-bottom: 1.5rem; /* Adds space between fields */
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem; /* Spacing between label and input */
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333; /* Adjust color as needed */
+}
+
+.input {
+  width: 95%; /* Ensures inputs are full width */
+  padding: 0.75rem; /* Adds padding inside the input */
+  border: 1px solid #ccc; /* Border for the input field */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Consistent font size */
+}
+
+.input:focus {
+  border-color: #4CAF50; /* Highlight border on focus */
+  outline: none; /* Removes default focus outline */
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.3); /* Subtle shadow on focus */
+}

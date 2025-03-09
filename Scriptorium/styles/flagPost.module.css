@@ -1,0 +1,127 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the page spans the full height of the viewport */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed; /* Make the navbar stay at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    /* background-color: #fff; Match your page background color */
+    z-index: 1000; /* Ensure it stays above other content */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Space Below Navbar */
+.content {
+    margin-top: 80px; /* Adjust based on the height of the navbar */
+    padding: 20px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.heading {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+.formLabel {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.textarea,
+.inputText {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.textarea:focus,
+.inputText:focus {
+    border-color: #0070f3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 112, 243, 0.2);
+}
+
+.textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Error Message */
+.error {
+    color: #d9534f;
+    background-color: #f8d7da;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* Submit Button */
+.submitButton {
+    display: block; /* Ensures it's treated as a block for centering */
+    width: 20%; /* Adjust width to make it smaller */
+    /* margin: 10px auto; Center horizontally and add some vertical spacing */
+    padding: 8px 0; /* Reduce padding for a smaller appearance */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    font-weight: bold;
+    margin-left: auto;
+    color: white;
+    background-color: #0070f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    text-align: center; /* Ensure text is centered inside the button */
+}
+
+.submitButton:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Read-only Input */
+.readOnly {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+

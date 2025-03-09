@@ -1,0 +1,443 @@
+/* styles/MyTemplates.module.css */
+
+.container {
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--background, #ffffff);
+    color: var(--foreground, #000000);
+    position: relative;
+  }
+  
+  .dark {
+    --background: #121212;
+    --foreground: #ffffff;
+  }
+  
+  .navigationButtonWrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .navigationButton {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navigationButton:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .darkModeButtonWrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .darkModeButton {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .darkModeButton:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .title {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  
+  .templateList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .templateCard {
+    background-color: #f3f4f6;
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .templateTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .templateDescription {
+    margin-bottom: 10px;
+  }
+  
+  .tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .tag {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px 5px 0 0;
+    font-size: 0.9rem;
+  }
+  
+  .editButton {
+    padding: 10px 20px;
+    background-color: #22c55e;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .editButton:hover {
+    background-color: #16a34a;
+  }
+  
+  .noTemplatesMessage {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2rem;
+  }
+  
+  /* Dark mode styles */
+  .dark .templateCard {
+    background-color: #1f2937;
+  }
+  
+  .dark .tag {
+    background-color: #374151;
+    color: #f9fafb;
+  }
+  
+  .dark .editButton {
+    background-color: #16a34a;
+  }
+  
+  .dark .editButton:hover {
+    background-color: #15803d;
+  }
+
+  /* styles/MyTemplates.module.css */
+
+.container {
+  padding: 20px;
+}
+
+.navigationButtonWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.navigationButton {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navigationButton:hover {
+  background-color: #005bb5;
+}
+
+.darkModeButtonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.darkModeButton {
+  background-color: #555;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.darkModeButton:hover {
+  background-color: #333;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.templateList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.templateCard {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+}
+
+.darkTemplateCard {
+  background-color: #2c2c2c;
+  border-color: #444;
+  color: #fff;
+}
+
+.templateTitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.templateDescription {
+  margin-bottom: 15px;
+}
+
+.tagsContainer {
+  margin-bottom: 15px;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.dark .tag {
+  background-color: #555;
+  color: #fff;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.editButton {
+  background-color: #0070f3;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editButton:hover {
+  background-color: #005bb5;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.noTemplatesMessage {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+.container {
+    padding: 20px;
+  }
+  
+  .navigationButtonWrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .navigationButton {
+    background-color: #0070f3;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .navigationButton:hover {
+    background-color: #005bb5;
+  }
+  
+  .darkModeButtonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .darkModeButton {
+    background-color: #555;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .darkModeButton:hover {
+    background-color: #333;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .templateList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .templateCard {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .darkTemplateCard {
+    background-color: #2c2c2c;
+    border-color: #444;
+    color: #fff;
+  }
+  
+  .templateTitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .templateDescription {
+    margin-bottom: 15px;
+  }
+  
+  .tagsContainer {
+    margin-bottom: 15px;
+  }
+  
+  .tag {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  
+  .dark .tag {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .editButton {
+    background-color: #0070f3;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .editButton:hover {
+    background-color: #005bb5;
+  }
+
+  
+  .noTemplatesMessage {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .deleteButton {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .deleteButton:hover {
+    background-color: #e63939;
+  }
+
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .deleteButton {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .deleteButton:hover {
+    background-color: #e63939;
+  }
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .deleteButton {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .deleteButton:hover {
+    background-color: #e63939;
+  }
+    
